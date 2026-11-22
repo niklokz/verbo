@@ -1,0 +1,66 @@
+/* Isolated styles for the prompt input component. */
+.prompt-component {
+  position: fixed;
+  left: 50%;
+  bottom: max(22px, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: min(680px, calc(100vw - 32px));
+  z-index: 10;
+}
+.prompt-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 10px;
+  background: #111;
+  border: 1px solid #303030;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+}
+.prompt-form textarea {
+  flex: 1;
+  min-width: 0;
+  max-height: 160px;
+  resize: none;
+  border: 0;
+  outline: 0;
+  padding: 10px 8px;
+  background: transparent;
+  color: #ededed;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.prompt-form textarea::placeholder { color: #686868; }
+.prompt-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid #3a3a3a;
+  border-radius: 9px;
+  background: #242424;
+  color: #f2f2f2;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease;
+}
+.prompt-form button:hover { background: #303030; border-color: #555; }
+.prompt-form button:focus-visible, .prompt-form textarea:focus-visible {
+  outline: 2px solid #777;
+  outline-offset: 2px;
+}
+.prompt-form button:disabled { opacity: .55; cursor: wait; }
+.prompt-status {
+  min-height: 18px;
+  margin: 8px 8px 0;
+  color: #858585;
+  font-size: 11px;
+}
+@media (max-width: 480px) {
+  .prompt-form { gap: 6px; padding: 8px; }
+  .prompt-form button { gap: 8px; padding: 0 11px; }
+}
