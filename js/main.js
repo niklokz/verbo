@@ -27,7 +27,7 @@
 
     isSending = true;
     button.disabled = true;
-    status.textContent = 'Pensando...';
+    status.textContent = 'Texto capturado e enviado para análise...';
 
     try {
       const response = await fetch(API_URL, {
