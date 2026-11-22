@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <title>verbo</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/prompt-input.css">
+</head>
+<body>
+  <main class="page" aria-label="verbo">
+    <section class="artwork" aria-label="Arte ASCII">
+<pre aria-hidden="true">
+             .       .
+          .           .
+       .      _____      .
+             /     \
+        ----|  .-.  |----
+             \  _  /
+       .      |_|      .
+          .           .
+             .   .
+</pre>
+      <p class="wordmark">verbo</p>
+    </section>
+
+    <section id="prompt-input" class="prompt-component" aria-label="Enviar texto">
+      <form id="prompt-form" class="prompt-form">
+        <label class="visually-hidden" for="prompt-text">Seu texto</label>
+        <textarea id="prompt-text" name="prompt" rows="1" placeholder="Diga alguma coisa..." autocomplete="off" required></textarea>
+        <button type="submit" id="prompt-submit" aria-label="Enviar prompt">
+          <span>Enviar</span><span aria-hidden="true">↗</span>
+        </button>
+      </form>
+      <p id="prompt-status" class="prompt-status" aria-live="polite"></p>
+    </section>
+  </main>
+  <script src="js/prompt-input.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
