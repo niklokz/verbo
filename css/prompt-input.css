@@ -60,7 +60,29 @@
   color: #858585;
   font-size: 11px;
 }
+
+/* Response styling follows the existing minimal monochrome interface. */
+.response-area {
+  width: min(680px, calc(100vw - 32px));
+  max-height: 38svh;
+  overflow-y: auto;
+  margin: 34px auto 0;
+  color: #d0d0d0;
+  font-size: 13px;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  text-align: left;
+  scrollbar-width: thin;
+}
+.response-area[hidden] { display: none; }
+
 @media (max-width: 480px) {
   .prompt-form { gap: 6px; padding: 8px; }
   .prompt-form button { gap: 8px; padding: 0 11px; }
+  .response-area {
+    max-height: 34svh;
+    margin-top: 26px;
+    font-size: 12px;
+  }
 }
